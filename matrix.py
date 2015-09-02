@@ -38,23 +38,16 @@ class Matrix(object):
 		w2, h2 = other.shape()
 
 		if (h2 != w1):
-			print("Mismatched shapes")
 			return None
 		
 		w3, h3 = w2, h1 # Shape of our result matrix
 		ans_array = [[0 for i in xrange(w3)] for j in xrange(h3)] # height of h3, width of w3, all zeros
 
 		for i in xrange(h3): # i is index of row
-			# print("i : {}".format(i))
 			for j in xrange(w3): # j is index of col
-				# print("j : {}".format(j))
 				curr_row = self.row(i);
 				curr_col = other.col(j);
 
-				# print("{} , {}".format(i, j))
-				# print(curr_col)
-				# print(curr_row)
-				# print("*****")
 				multiplied = [curr_col[k] * curr_row[k] for k in xrange(len(curr_col))]
 				ans_array[i][j] = sum(multiplied);
 

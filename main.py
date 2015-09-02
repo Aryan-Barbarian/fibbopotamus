@@ -1,6 +1,6 @@
 import numpy as np
 from matrix import Matrix
-
+import sys
 # O(2^n)
 def memoize(fn):
 	seen = dict()
@@ -32,7 +32,12 @@ def fastest(n):
 
 
 def main():
-	n = 500 # The other functions can't handle this
+	arg = sys.argv[1]
+
+	try:
+		n = int(arg)
+	except ValueError:
+		print("Argument must be an integer! Found: {}".format(raw_n))
 
 	if (n <= 25):
 		print "Normal: {} ".format(normal(n))

@@ -39,13 +39,13 @@ def main():
 	except ValueError:
 		print("Argument must be an integer! Found: {}".format(raw_n))
 
-	if (n <= 25):
+	if (n <= 30):
 		print "Normal: {} ".format(normal(n))
 	else:
 		print("n too high for normal")
 
 
-	if (n <= 30):
+	if (n <= 35):
 		print "Dynamic: {} ".format(dynamic(n))
 	else:
 		print("n too high for dynamic")

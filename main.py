@@ -75,22 +75,19 @@ def main():
 	if (arg == "profile"):
 		profile(n)
 		return
-	if (n <= 30):
-		print "Normal: {} ".format(normal(n))
-	else:
-		print("n too high for normal")
+	# if (n <= 30):
+	# 	ans = normal(n)
+	# else:
+	# 	print("n too high for normal")
 
 
-	if (n <= 1000000):
-		print "Dynamic: {} ".format(dynamic(n))
-	else:
-		print("n too high for dynamic")
+	# if (n <= 1000000):
+	# 	print "Dynamic: {} ".format(dynamic(n))
+	# else:
+	# 	print("n too high for dynamic")
 
 
-	if (n <= 1000000):
-		print "Fastest: {} ".format(fastest(n))
-	else:
-		print("n too high for fastest")
+	print "\n\n{}\n\n".format(fastest(n))
 
 
 if __name__ == "__main__":
